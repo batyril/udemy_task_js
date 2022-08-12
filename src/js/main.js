@@ -1,8 +1,4 @@
 const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
-const lastWatchFilm1 = prompt('Один из последних просмотренных фильмов?');
-const ratingFilm1 = +prompt('На сколько оцените его?');
-const lastWatchFilm2 = prompt('Один из последних просмотренных фильмов?');
-const ratingFilm2 = +prompt('На сколько оцените его?');
 
 const personalMovieDB = {
   count: numberOfFilms,
@@ -12,6 +8,24 @@ const personalMovieDB = {
   private: false,
 };
 
-personalMovieDB.movies[lastWatchFilm1] = ratingFilm1;
+for (let i = 0; i < numberOfFilms; i += 1) {
+  const lastWatchFilm = prompt('Один из последних просмотренных фильмов?');
+  const ratingFilm = prompt('На сколько оцените его?');
+  const isCheckName = (lastWatchFilm.length !== 0 && lastWatchFilm.length < 50
+    && ratingFilm !== '' && lastWatchFilm !== ''
+    && ratingFilm !== null && lastWatchFilm !== null);
+  if (isCheckName) {
+    personalMovieDB.movies[lastWatchFilm] = ratingFilm;
+  } else {
+    alert('ошибка');
+    i -= 1;
+  }
+}
 
-personalMovieDB.movies[lastWatchFilm2] = ratingFilm2;
+if (personalMovieDB.count < 10) {
+  alert('Просмотрено довольно мало фильмов');
+} else if (personalMovieDB.count > 10 && personalMovieDB.count < 3) {
+  alert('Вы классический зритель');
+}
+
+console.log(personalMovieDB);
