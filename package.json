@@ -1,0 +1,19 @@
+{
+  "name": "udemy_task_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/batyril/udemy_task_js.git"
+  },
+  "author": "baturil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/batyril/udemy_task_js/issues"
+  },
+  "homepage": "https://github.com/batyril/udemy_task_js#readme"
+}
