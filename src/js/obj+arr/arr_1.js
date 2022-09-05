@@ -1,5 +1,4 @@
 const family = ['Peter', 'Ann', 'Alex', 'Linda'];
-const arr1 = 4634;
 function showFamily(arr) {
   if (arr.length === 0 || typeof arr !== 'object') {
     return 'Семья пуста';
